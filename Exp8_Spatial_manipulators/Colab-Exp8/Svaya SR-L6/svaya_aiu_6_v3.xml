@@ -1,0 +1,57 @@
+<mujoco model="svaya">
+  <compiler angle="radian"/>
+  <asset>
+    <mesh name="aiu_link0_v3" file="aiu_link0_v3.stl"/>
+    <mesh name="aiu_link1_v3" file="aiu_link1_v3.stl"/>
+    <mesh name="aiu_link2_v3" file="aiu_link2_v3.stl"/>
+    <mesh name="aiu_link3_v3" file="aiu_link3_v3.stl"/>
+    <mesh name="aiu_link4_v3" file="aiu_link4_v3.stl"/>
+    <mesh name="aiu_link5_v3" file="aiu_link5_v3.stl"/>
+    <mesh name="aiu_link6_v3" file="aiu_link6_v3.stl"/>
+  </asset>
+  <worldbody>
+    <geom type="mesh" mesh="aiu_link0_v3"/>
+    <body name="link1" pos="0 0 0.06">
+      <inertial pos="-0.000181559 -0.00545733 0.0681549" quat="0.715779 0.0924481 -0.102175 0.684597" mass="6.16454" diaginertia="0.0178973 0.0169876 0.0128687"/>
+      <joint name="joint1" pos="0 0 0" axis="0 0 1" range="-3.11018 3.11018"/>
+      <geom type="mesh" mesh="aiu_link1_v3"/>
+      <body name="link2" pos="0 -0.075 0.102" quat="0.5 -0.5 -0.5 -0.5">
+        <inertial pos="0.189946 5.57256e-05 -0.0748324" quat="0.494307 0.506018 0.501998 0.497598" mass="11.7695" diaginertia="0.562934 0.555245 0.0319158"/>
+        <joint name="joint2" pos="0 0 0" axis="0 0 1" range="-3.11018 3.11018"/>
+        <geom type="mesh" mesh="aiu_link2_v3"/>
+        <body name="link3" pos="0.46826 0 -0.01113" quat="0.707107 0 0 0.707107">
+          <inertial pos="0.000151158 -0.0221171 0.0699053" quat="0.84665 0.525587 0.0392982 -0.0734735" mass="3.03523" diaginertia="0.00616287 0.00604653 0.00433072"/>
+          <joint name="joint3" pos="0 0 0" axis="0 0 1" range="-3.11018 3.11018"/>
+          <geom type="mesh" mesh="aiu_link3_v3"/>
+          <body name="link4" pos="0 -0.0797 0.07913" quat="0.707107 0.707107 0 0">
+            <inertial pos="-0.000162947 -0.101392 0.292677" quat="0.986471 0.163873 0.00061687 -0.00443691" mass="3.89711" diaginertia="0.052704 0.0502142 0.00770959"/>
+            <joint name="joint4" pos="0 0 0" axis="0 0 1" range="-3.11018 3.11018"/>
+            <geom type="mesh" mesh="aiu_link4_v3"/>
+            <body name="link5" pos="0 -0.05811 0.35171" quat="0.707107 -0.707107 0 0">
+              <inertial pos="0.000164059 -0.0240047 0.0534406" quat="0.541652 0.423182 -0.456908 0.564592" mass="2.79655" diaginertia="0.00518481 0.00496627 0.00352013"/>
+              <joint name="joint5" pos="0 0 0" axis="0 0 1" range="-3.11018 3.11018"/>
+              <geom type="mesh" mesh="aiu_link5_v3"/>
+              <body name="link6" pos="0 -0.0797 0.05811" quat="0.707107 0.707107 0 0">
+                <inertial pos="-0.000180877 0.000124945 0.0289094" quat="0.470412 0.53059 -0.471833 0.523986" mass="0.611633" diaginertia="0.000874169 0.000656863 0.000650186"/>
+                <joint name="joint6" pos="0 0 0" axis="0 0 1" range="-3.11018 3.11018"/>
+                <geom type="mesh" mesh="aiu_link6_v3"/>
+                  <site name="attachment_site" size="0.01" pos="0 0.0 0.057" quat="1 0 0 0" rgba="1 0 0 1" group="1"/>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+    </body>
+  </worldbody>
+    <actuator>
+
+        <motor name="joint1" joint="joint1"/>
+        <motor name="joint2" joint="joint2"/>
+        <motor name="joint3" joint="joint3"/>
+        <motor name="joint4" joint="joint4"/>
+        <motor name="joint5" joint="joint5"/>
+        <motor name="joint6" joint="joint6"/>
+
+    </actuator>
+
+</mujoco>
